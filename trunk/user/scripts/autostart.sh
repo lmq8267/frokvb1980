@@ -22,8 +22,16 @@ do
 	if [ "$?" == "0" ]; then
 		break
 	fi
+	ping -c 1 -W 1 -q www.baidu.com 1>/dev/null 2>&1
+	if [ "$?" == "0" ]; then
+		break
+	fi
 	sleep 5
-	ping -c 1 -W 1 -q baidu.com 1>/dev/null 2>&1
+	ping -c 1 -W 1 -q 119.29.29.29 1>/dev/null 2>&1
+	if [ "$?" == "0" ]; then
+		break
+	fi
+	ping -c 1 -W 1 -q www.qq.com 1>/dev/null 2>&1
 	if [ "$?" == "0" ]; then
 		break
 	fi
