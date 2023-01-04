@@ -324,7 +324,7 @@ function on_ttyd_link(){
 
                                     <table width="100%" cellpadding="4" cellspacing="0" class="table">
                                         <tr>
-                                            <th colspan="2" style="background-color: #E3E3E3;"><#Adm_System_webs#></th>
+                                            <th colspan="2" style="background-color: rgba ( 171 , 168 , 167 , 0.2 );"><#Adm_System_webs#></th>
                                         </tr>
                                         <tr id="row_http_proto">
                                             <th><#Adm_System_http_proto#></th>
@@ -370,7 +370,7 @@ function on_ttyd_link(){
 
                                     <table width="100%" cellpadding="4" cellspacing="0" class="table" id="tbl_https_certs" style="display:none">
                                         <tr>
-                                            <th colspan="4" style="background-color: #E3E3E3;"><#Adm_System_https_certs#></th>
+                                            <th colspan="4" style="background-color: rgba ( 171 , 168 , 167 , 0.2 );"><#Adm_System_https_certs#></th>
                                         </tr>
                                         <tr id="row_https_gen" style="display:none">
                                             <td align="right" style="text-align:right;">
