@@ -1,17 +1,12 @@
+include $(ROOTDIR)/coustom
 THISDIR = $(shell pwd)
-xray_dir="xray.com/core/main"
-export GO111MODULE=on
-export GOPROXY=https://goproxy.cn
-xray_SED_ARGS:=
-xray_SED_ARGS += \
-	s/_ "xray.com\/core\/main\/json"/\/\/ &/; \
-	/\/\/ _ "xray.com\/core\/main\/jsonem"/s/\/\/ //;
-xray_SED_ARGS += \
-	s/_ "xray.com\/core\/main\/json"/\/\/ &/;
-xray_VERSION := 1.7.0
-xray_URL := https://codeload.github.com/xtls/xray-core/tar.gz/v$(xray_VERSION)
-
-all:download_xray build_extract build_xray
+#export GO111MODULE=on
+#export GOPROXY=https://goproxy.bj.bcebos.com/
+Xray_VERSION := 1.6.1
+Xray_URL := https://codeload.github.com/XTLS/Xray-core/tar.gz/v$(Xray_VERSION)
+Xray_dir = xray-core/Xray-core-$(Xray_VERSION)/main
+ifeq ($(GITHUB_ACTION),n)
+all:download_xray build_extract build_Xray
 
 download_xray:
 	( if [ ! -f $(THISDIR)/xray ]; then \
